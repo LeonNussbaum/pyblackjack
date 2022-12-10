@@ -214,9 +214,9 @@ class blackjack:
 
         player1.bet = self.betint
 
-        if(player1.bet == 0):
+        if(self.betint.get() == 0):
             return
-        elif(player1.bet.get() > player1.monney):
+        elif(self.betint.get() > player1.monney):
             return
 
         if(len(deck1.deck) < 78):
