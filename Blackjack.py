@@ -208,16 +208,16 @@ class blackjack:
         return i
 
     def bethit(self):
+        if(self.betint.get() == 0):
+            return
+        elif(self.betint.get() > player1.monney):
+            return
+        
         global gamedata1
         gamedata1 = gamedata()
         self.gamereset()
 
         player1.bet = self.betint
-
-        if(self.betint.get() == 0):
-            return
-        elif(self.betint.get() > player1.monney):
-            return
 
         if(len(deck1.deck) < 78):
             deck1.createdeck()
